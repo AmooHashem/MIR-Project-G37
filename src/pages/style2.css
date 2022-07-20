@@ -1,0 +1,108 @@
+.box2 {
+    background-color: #1F2937;
+    padding: 55px 52px 115px 52px;
+}
+
+.head2 {
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    
+    color: #FFFFFF;
+    margin-bottom: 0px;
+    margin-right: 100px;
+    text-shadow: -2px 3px 1px black;
+
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.lin {
+    margin: auto 5px;
+    
+}
+
+#rnd-pass2 {
+    margin-top: 0px;
+    color: #4ADF86;
+}
+
+.txt2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #D5D4D8;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.btn2 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #10B981;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-top: 10px;
+
+}
+
+.line2 {
+    border: 1px solid #2F3E53;
+    margin: 35px 0;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.pass-box2 {
+    background-color: #273549;
+    border-radius: 6px;
+    width: 100%;
+    text-align: left;
+    padding: 20px 5px;
+    min-height: 300px; 
+    size: cover;
+}
+
+
+.container4 {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start; 
+    size: 100vh;
+}
+
+.pass-txt2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: left;
+    color: white;
+    text-shadow: 0 0 1px black;
+    margin: auto 20px;
+}
+
+#txt-box2 {
+    text-align: center;
+    width: 60%;
+    font-size: 14px;
+    border-radius: 50px;
+}
+
+
+
