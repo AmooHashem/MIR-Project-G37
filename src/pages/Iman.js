@@ -5,7 +5,7 @@ import Card from '../components/Card'
 
 
 export default function Iman() {
-  const alireza = {
+  const people = [{
     header: {
       img: "./images/hashem.jpg",
       name: "Alireza Hashemi",
@@ -23,8 +23,7 @@ export default function Iman() {
       instagram: "",
       github: "AmooHashem"
     }
-  }
-  const erfan = {
+  }, {
     header: {
       img: "./images/erfan.jpg",
       name: "Erfan Moeini",
@@ -42,8 +41,7 @@ export default function Iman() {
       instagram: "",
       github: "erfanmotnt"
     }
-  }
-  const iman = {
+  }, {
     header: {
       img: "./images/Iman.jpg",
       name: "Iman Alipour",
@@ -61,28 +59,14 @@ export default function Iman() {
       instagram: "",
       github: "AlipourIm"
     }
-  }
+  }]
   
   // js here :)
   return (
     // html here
     <div className="body">
       <Header />
-      <Card
-        {
-        ...alireza
-        }
-      />
-      <Card
-        {
-        ...erfan
-        }
-      />
-      <Card
-        {
-        ...iman
-        }
-      />
+      {people.map(person => <Card {...person}/>)}
     </div>
 
 
