@@ -9,19 +9,23 @@ export default function HW4() {
     const [type, setType] = useState('classification');
     const [query, setQuery] = useState('');
     const [queryExp, setQueryExp] = useState(false);
+    const [btnDisabled, setBtnDisabled] = useState(false);
 
     async function hw4_query() {
+        setBtnDisabled(true)
 
         await fetch(`${DOMAIN}${type}/`, {
             method: "POST",
             body: JSON.stringify({ query: query, queryExp: queryExp, type: type, mode: 'no-cors' }),
         })
-            .then((response) => response.json())
-            .then((data) => {
-                setAnswers(data.answers)
-            })
-            .catch(e => console.log(e));
-    }
+        .then((response) => response.json())
+        .then((data) => {
+            setAnswers(data.answers)
+        })
+        .catch(e => console.log(e));
+        
+        setBtnDisabled(false)
+        }
     // js here :)
     return (
         // html here
@@ -38,7 +42,7 @@ export default function HW4() {
                         <option value="classification">Classification</option>
                         <option value="clustering">Clustering</option>
                     </select>
-                    <button id="query-btn2" onClick={() => hw4_query()} className="btn2">Show Results</button>
+                    <button disabled={btnDisabled} id="query-btn2" onClick={() => hw4_query()} className={`${btnDisabled ? "btn2-disabled":"btn2"}`}>Show Results</button>
                 </div>
                 <div className="line2"></div>
                 <div className="container4">

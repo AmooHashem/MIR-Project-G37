@@ -10,7 +10,7 @@ export default function Body() {
                     <div className="space-box"></div>
                     <h2 id="name-h2">Iman Alipour</h2>
                     <h4 id="occupation-h4">Frontend Developer</h4>
-                    <a className="a-website-link" href="https://alipourim.github.io/my-website/" terget="_blank"><p id="website-lin" >ImanAlipour.website</p></a>
+                    <a className="a-website-link" href="https://alipourim.github.io/my-website/" target="_blank"><p id="website-lin" >ImanAlipour.website</p></a>
                     <div className="container5">
                         <button id="mail-btn" className="btn-container">
                             <a target="_blank" href="mailto:https://iman.alip2001@gmail.com"><i className="icon fa-solid fa-envelope"></i></a>

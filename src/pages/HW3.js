@@ -9,9 +9,12 @@ export default function HW3() {
     const [type, setType] = useState('boolean');
     const [query, setQuery] = useState('');
     const [queryExp, setQueryExp] = useState(false);
+    const [btnDisabled, setBtnDisabled] = useState(false);
+
+
 
     async function hw3_query() {
-
+        setBtnDisabled(true)
         await fetch(`${DOMAIN}${type}/`, {
             method: "POST",
             body: JSON.stringify({query: query, queryExp: queryExp, type: type, mode: 'no-cors'}),
@@ -21,6 +24,7 @@ export default function HW3() {
             setAnswers(data.answers)
         })
         .catch(e => console.log(e));
+        setBtnDisabled(false)
     }
     // js here :)
 
@@ -48,7 +52,7 @@ export default function HW3() {
                             <option value="transformer">Transformer</option>
                             <option value="fast-text">FastText</option>
                         </select>
-                        <button id="query-btn2" onClick={() => hw3_query()} className="btn2">Search</button>
+                        <button disabled={btnDisabled} id="query-btn2" onClick={() => hw3_query()}  className={`${btnDisabled ? "btn2-disabled":"btn2"}`}>Search</button>
                     </div>
 
                 </div>

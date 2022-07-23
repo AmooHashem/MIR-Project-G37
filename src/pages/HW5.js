@@ -9,18 +9,22 @@ export default function HW5() {
     const [type, setType] = useState('hits');
     const [query, setQuery] = useState('');
     const [queryExp, setQueryExp] = useState(false);
+    const [btnDisabled, setBtnDisabled] = useState(false);
 
+
+    
     async function hw5_query() {
-
+        setBtnDisabled(true)
         await fetch(`${DOMAIN}${type}/`, {
             method: "POST",
             body: JSON.stringify({ query: query, queryExp: queryExp, type: type, mode: 'no-cors' }),
         })
-            .then((response) => response.json())
-            .then((data) => {
-                setAnswers(data.answers)
-            })
-            .catch(e => console.log(e));
+        .then((response) => response.json())
+        .then((data) => {
+            setAnswers(data.answers)
+        })
+        .catch(e => console.log(e));
+        setBtnDisabled(false)
     }
     // js here :)
     return (
@@ -39,7 +43,7 @@ export default function HW5() {
                         <option value="hits">HITS</option>
                         <option value="page_rank">Page-Rank</option>
                     </select>
-                    <button id="query-btn2" onClick={() => hw5_query()} className="btn2">Show Results</button>
+                    <button disabled={btnDisabled} id="query-btn2" onClick={() => hw5_query()}  className={`${btnDisabled ? "btn2-disabled":"btn2"}`}>Show Results</button>
                 </div>
                 <div className="line2"></div>
                 <div className="container4">
