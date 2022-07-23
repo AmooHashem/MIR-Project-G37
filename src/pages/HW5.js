@@ -4,13 +4,13 @@ import { DOMAIN } from './../config/consts'
 import Header from './Header'
 
 
-export default function HW4() {
+export default function HW5() {
     const [answers, setAnswers] = useState([]);
-    const [type, setType] = useState('classification');
+    const [type, setType] = useState('hits');
     const [query, setQuery] = useState('');
     const [queryExp, setQueryExp] = useState(false);
 
-    async function hw4_query() {
+    async function hw5_query() {
 
         await fetch(`${DOMAIN}${type}/`, {
             method: "POST",
@@ -29,16 +29,17 @@ export default function HW4() {
         <div className="body">
             <Header />
             <div className="box2">
-                <h1 className="head2">Search for query's</h1>
-                <h1 className="head2" id="rnd-pass2">Classification/Clustering</h1>
-                <p className="txt2">For more information about implementation and performance metrics, please click <a className="anchor_text" target="_blank" href='https://colab.research.google.com/drive/19QEEKRS3TUFagjWWHi03bGxkge_RhKuq?usp=sharing'>here</a>!</p>
+                <h1 className="head2">Implementiation of</h1>
+                <h1 className="head2" id="rnd-pass2">HITS/Page-Rank</h1>
+                <h1 className="head2" id="head-box2">Algorithms</h1>
+                <p className="txt2">For more information about implementation and performance metrics, please click <a className="anchor_text" target="_blank" href='https://colab.research.google.com/drive/1XrguSYDSFZq5KxKObEoXL-gxtMqHtsav?usp=sharing'>here</a>!</p>
 
                 <div className="container2">
                     <select id="model-selector" className="box3" name="model-name" value={type} onChange={(e) => setType(e.target.value)}>
-                        <option value="classification">Classification</option>
-                        <option value="clustering">Clustering</option>
+                        <option value="hits">HITS</option>
+                        <option value="page_rank">Page-Rank</option>
                     </select>
-                    <button id="query-btn2" onClick={() => hw4_query()} className="btn2">Show Results</button>
+                    <button id="query-btn2" onClick={() => hw5_query()} className="btn2">Show Results</button>
                 </div>
                 <div className="line2"></div>
                 <div className="container4">

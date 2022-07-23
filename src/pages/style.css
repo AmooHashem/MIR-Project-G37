@@ -1,15 +1,18 @@
 body{
     margin: 0;
-    border: 8px solid black;
+}
+
+#head-box2{
+    margin-top: 0px;
 }
 
 .body {
+    border: 8px solid black;
     margin: 0px;
     padding: 0px;
 
     font-family:'Courier New', Courier, monospace;
     background-color: grey;
-    height: 210vh;
     padding-bottom: 200px;
 
 }

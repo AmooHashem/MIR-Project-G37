@@ -1,4 +1,5 @@
 import React from "react";
+import Header from './Header'
 // import AppSearchAPIConnector from "@elastic/search-ui-app-search-connector";
 import ElasticsearchAPIConnector from "@elastic/search-ui-elasticsearch-connector";
 import {
@@ -46,48 +47,51 @@ const config = {
 
 export default function ElasticSearch() {
   return (
-    <SearchProvider config={config}>
-      <WithSearch mapContextToProps={({ wasSearched }) => ({ wasSearched })}>
-        {({ wasSearched }) => {
-          return (
-            <div className="App">
-              <ErrorBoundary>
-                <Layout
-                  header={<SearchBox autocompleteSuggestions={true} />}
-                  sideContent={
-                    <div>
-                      {wasSearched && (
-                        <Sorting
-                          label={"Sort by"}
-                          sortOptions={buildSortOptionsFromConfig()}
-                        />
-                      )}
-                      {getFacetFields().map(field => (
-                        <Facet key={field} field={field} label={field} />
-                      ))}
-                    </div>
-                  }
-                  bodyContent={
-                    <Results
-                      titleField={getConfig().titleField}
-                      urlField={getConfig().urlField}
-                      thumbnailField={getConfig().thumbnailField}
-                      shouldTrackClickThrough={true}
-                    />
-                  }
-                  bodyHeader={
-                    <React.Fragment>
-                      {wasSearched && <PagingInfo />}
-                      {wasSearched && <ResultsPerPage />}
-                    </React.Fragment>
-                  }
-                  bodyFooter={<Paging />}
-                />
-              </ErrorBoundary>
-            </div>
-          );
-        }}
-      </WithSearch>
-    </SearchProvider>
+    <>
+      <Header />
+      <SearchProvider config={config}>
+        <WithSearch mapContextToProps={({ wasSearched }) => ({ wasSearched })}>
+          {({ wasSearched }) => {
+            return (
+              <div className="App">
+                <ErrorBoundary>
+                  <Layout
+                    header={<SearchBox autocompleteSuggestions={true} />}
+                    sideContent={
+                      <div>
+                        {wasSearched && (
+                          <Sorting
+                            label={"Sort by"}
+                            sortOptions={buildSortOptionsFromConfig()}
+                          />
+                        )}
+                        {getFacetFields().map(field => (
+                          <Facet key={field} field={field} label={field} />
+                        ))}
+                      </div>
+                    }
+                    bodyContent={
+                      <Results
+                        titleField={getConfig().titleField}
+                        urlField={getConfig().urlField}
+                        thumbnailField={getConfig().thumbnailField}
+                        shouldTrackClickThrough={true}
+                      />
+                    }
+                    bodyHeader={
+                      <React.Fragment>
+                        {wasSearched && <PagingInfo />}
+                        {wasSearched && <ResultsPerPage />}
+                      </React.Fragment>
+                    }
+                    bodyFooter={<Paging />}
+                  />
+                </ErrorBoundary>
+              </div>
+            );
+          }}
+        </WithSearch>
+      </SearchProvider>
+    </>
   );
 }

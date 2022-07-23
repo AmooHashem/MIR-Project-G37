@@ -1,26 +1,28 @@
 import './style.css';
 import React from "react";
+import Header from './Header'
+import ImansCard from './Iman_Card'
+import ErfansCard from './Erfan_Card'
+import AlirezasCard from './Alireza_Card'
+
 
 export default function Iman() {
   // js here :)
   return (
     // html here
     <div className="body">
-      <div className="container">
-        <button className="btn"><a className="link-btn" href="/hw3">HW3 Page</a></button>
-        <button className="btn"><a className="link-btn" href="/hw4">HW4 Page</a></button>
-        <button className="btn"><a className="link-btn" href="/elastic-search">Elastic Search</a></button>
-        <button className="btn"><a className="link-btn" href="/">Home Page</a></button>
-      </div>
+      <Header />
+      <AlirezasCard />
+      {/*
       <div className="card">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" />
         <div className="flip-box">
           <div className="flip-box-inner">
             <div className="flip-box-front">
-              <img className="avatar" src="/images/per.png" alt="" />
+              <img className="avatar" src="/images/hashem.jpg" alt="A picture of seyyed alireza hashemi, smiling at camera." />
             </div>
             <div className="flip-box-back">
-              <p>Rasta CTO!</p>
+              <p>Rasta's CTO!</p>
             </div>
           </div>
         </div>
@@ -28,37 +30,45 @@ export default function Iman() {
           <h3>Seyyed Alireza Hashemi</h3>
           <p>CE student at SUT</p>
           <h4>Tehran, Iran</h4>
-          <p>sth.....</p>
+          <p>Future masters software engineering student from Esfahan</p>
           <div className="link-container">
             <a href="" target="_blank"><i className="lin fab fa-linkedin"></i></a>
             <a href="" target="_blank"><i className="lin fab fa-github"></i></a>
             <a href="" target="_blank"><i className="lin fab fa-google" aria-hidden="true"></i></a>
           </div>
         </div>
-      </div><div className="card">
+      </div>
+       */}
+      <ErfansCard />
+      {/*
+  <div className="card">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" />
         <div className="flip-box">
           <div className="flip-box-inner">
             <div className="flip-box-front">
-              <img className="avatar" src="/images/per.png" alt="" />
+              <img className="avatar" src="/images/erfan.jpg" alt="Picture of erfan moeini laying on ground at his bag and smiling aat camera viciously!" />
             </div>
             <div className="flip-box-back">
-              <p>I'm tooooooo cool</p>
+              <p>I won Gold medal in iran's Math Olympiads =D</p>
             </div>
           </div>
         </div>
         <div>
           <h3>Erfan Moeini</h3>
-          <p>CE student at SUT</p>
+          <p>CE/Math student at SUT</p>
           <h4>Tehran, Iran</h4>
-          <p>sth....</p>
+          <p>I'm interested in AI and ML and also hardware! I currently work at a hardware designing company.</p>
           <div className="link-container">
             <a href="" target="_blank"><i className="lin fab fa-linkedin"></i></a>
             <a href="" target="_blank"><i className="lin fab fa-github"></i></a>
             <a href="" target="_blank"><i className="lin fab fa-google" aria-hidden="true"></i></a>
           </div>
         </div>
-      </div><div className="card">
+      </div>
+    */}
+      <ImansCard id="imans-card"/>
+      {/*
+      <div className="card">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" />
         <div className="flip-box">
           <div className="flip-box-inner">
@@ -66,7 +76,7 @@ export default function Iman() {
               <img className="avatar" src="/images/Iman.jpg" alt="Picture of Iman Alipour taken at 2018" />
             </div>
             <div className="flip-box-back">
-              <p>Hello! :D</p>
+              <p>Hello! :D I'm trying to enjoy my summer internship as much as possible! I guess I just love learning new things everyday.</p>
             </div>
           </div>
         </div>
@@ -82,6 +92,7 @@ export default function Iman() {
           </div>
         </div>
       </div>
+  */}
     </div>
 
 

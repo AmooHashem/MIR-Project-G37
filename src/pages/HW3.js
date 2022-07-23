@@ -2,6 +2,7 @@ import './style.css';
 import './style2.css';
 import React, { useState } from "react";
 import { DOMAIN } from './../config/consts'
+import Header from './Header'
 
 export default function HW3() {
     const [answers, setAnswers] = useState([]);
@@ -27,14 +28,7 @@ export default function HW3() {
         // html here
 
         <div className="body">
-            <div className="container">
-                <button className="btn"><a className="link-btn" href="/hw3">HW3 Page</a></button>
-                <button className="btn"><a className="link-btn" href="/hw4">HW4 Page</a></button>
-                <button className="btn"><a className="link-btn" href="/elastic-search">Elastic Search</a></button>
-                <button className="btn"><a className="link-btn" href="/">Home Page</a></button>
-            </div>
-
-
+            <Header />
             <div className="box2">
                 <h1 className="head2">Search with</h1>
                 <h1 className="head2" id="rnd-pass2">Boolean/Tf-idf/Transformer/fastText</h1>
