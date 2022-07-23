@@ -1,9 +1,9 @@
 import './style.css';
 import React from "react";
 import Header from './Header'
-import ImansCard from './Iman_Card'
-import ErfansCard from './Erfan_Card'
-import AlirezasCard from './Alireza_Card'
+import ImansCard from '../components/Iman_Card'
+import ErfansCard from '../components/Erfan_Card'
+import AlirezasCard from '../components/Alireza_Card'
 
 
 export default function Iman() {

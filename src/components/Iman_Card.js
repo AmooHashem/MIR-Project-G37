@@ -1,8 +1,8 @@
 import React from 'react'
 import './style-dark.css';
 
-import Body from '../components/Body_i'
-import Footer from '../components/Footer_i.js'
+import Body from './Body_i'
+import Footer from './Footer_i.js'
 
 
 export default function App(){
