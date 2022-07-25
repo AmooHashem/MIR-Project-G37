@@ -29,9 +29,9 @@ const { hostIdentifier, searchKey, endpointBase, engineName } = getConfig();
 
 
 const connector = new ElasticsearchAPIConnector({
-  host: "https://mir.es.us-central1.gcp.cloud.es.io",
-  apiKey: "OEZpeURZSUJfSmljYU90bGZCYkI6anJseTZ0U2VRZ3FCNTNKZXNiTXBhdw==",
-  index: "index-1"
+  host: "https://mir-bc50c0.es.us-central1.gcp.cloud.es.io",
+  apiKey: "ZmF3a040SUI2MXg5QkZsVENvSDI6b2tERlA3a21UMlNSWVFMT3ktREE1Zw==",
+  index: "search-persian-twitts"
 });
 
 const config = {
@@ -43,7 +43,6 @@ const config = {
   apiConnector: connector,
   alwaysSearchOnInitialLoad: true
 };
-
 
 export default function ElasticSearch() {
   return (

@@ -1,0 +1,16 @@
+{
+  "engineName": "search-persian-twitts",
+  "endpointBase": "https://mir-bc50c0.ent.us-central1.gcp.cloud.es.io",
+  "searchKey": "search-zw8de1gt7m4wc7yo4ef4fagc",
+  "resultFields": [
+    "text",
+    "id"
+  ],
+  "sortFields": [
+
+  ],
+  "facets": [
+
+  ],
+  "titleField": "id"
+}
