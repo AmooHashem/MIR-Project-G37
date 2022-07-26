@@ -18,8 +18,7 @@ body{
 }
 
 .exp_query_grid {
-    display: grid;
-    grid-template: auto auto auto / repeat(4, 1fr);
+
 }
   
   
