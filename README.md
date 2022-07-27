@@ -11,12 +11,12 @@
 
 تمامی فایل‌هایی که مشاهده میکنید برای واسط کاربری‌اند، بجز فایل های پوشه Back-end که شامل فایل‌های سرور میباشند.
  
- دیپلوی کردن سرور بک‌اند:
+ راه‌اندازی سرور بک‌اند:
 
 ‍‍
 ```
-> git clone https://github.com/AmooHashem/MIR-Project-G37
-> cd MIR-Project-G37/Back_end
+> git clone https://github.com/IR1401-Spring-Final-Projects/SocialMedia1401-37
+> cd SocialMedia1401-37/Back_end
 > virtualenv venv
 > source venv/bin/activate
 > pip install -r requirements.txt
@@ -25,24 +25,17 @@
 
 حال تمامی سل‌ها را ران کنید.
 
-دیپلوی کردن واسط کاربری:
+راه‌اندازی واسط کاربری:
+
 یک ترمینال جدید باز کنید و سپس
 
 ```
-> cd MIR-Project-G37
+> cd SocialMedia1401-37
 > yarn
 > yarn start
 ```
 
-
-برای ران کردن پروژه ابتدا به پوشه پروژه بروید و دستور زیر را برای دیپلوی کردن فرانت سایت ران کنید:
-‍‍‍‍
-```
-> yarn
-> yarn start
-```
-
-با این کار در بروزر واسط کاربری بالا می‌آید.
+با این کار در آدرس `http://localhost:3000` بروزر واسط کاربری بالا می‌آید.
 
 حال با ران کردن ژوپیتر نوت‌بوک، وارد پوشه Back_end شوید و نوت‌بوک server.ipynb را بطور کامل اجرا کنید، اگر نیاز به نصب کتابخانه‌ها دارید هم سل اول را از حالت کامنت خارج کنید.
 
