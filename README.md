@@ -10,6 +10,30 @@
   | `دیدبان عقب` | معینی | عرفان | ۹۷۱۱۰۲۰۶ |
 
 تمامی فایل‌هایی که مشاهده میکنید برای واسط کاربری‌اند، بجز فایل های پوشه Back-end که شامل فایل‌های سرور میباشند.
+ 
+ دیپلوی کردن سرور بک‌اند:
+
+‍‍
+```
+> git clone [https://github.com/AmooHashem/MIR-Project-G37](https://github.com/AmooHashem/MIR-Project-G37)
+> cd MIR-Project-G37/Back_end
+> virtualenv venv
+> source venv/bin/activate
+> pip install -r requirements.txt
+> jupyter notebook
+```
+
+حال تمامی سل‌ها را ران کنید.
+
+دیپلوی کردن واسط کاربری:
+یک ترمینال جدید باز کنید و سپس
+
+```
+> cd MIR-Project-G37
+> yarn
+> yarn start
+```
+
 
 برای ران کردن پروژه ابتدا به پوشه پروژه بروید و دستور زیر را برای دیپلوی کردن فرانت سایت ران کنید:
 ‍‍‍‍
