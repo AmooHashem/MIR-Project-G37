@@ -15,7 +15,7 @@
 
 ‍‍
 ```
-> git clone [https://github.com/AmooHashem/MIR-Project-G37](https://github.com/AmooHashem/MIR-Project-G37)
+> git clone https://github.com/AmooHashem/MIR-Project-G37
 > cd MIR-Project-G37/Back_end
 > virtualenv venv
 > source venv/bin/activate
